@@ -41,12 +41,3 @@ function mergeSort(array){
     }
 }
 console.log(mergeSort([9,8, 0, 89, 2, 6]));
-
-/*     else if(array.length == 2){
-        if(array[0] > array[1]){
-            return array[0];
-        }
-        else{
-            return array[1];
-        }
-*/
