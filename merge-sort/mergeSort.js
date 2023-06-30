@@ -16,7 +16,6 @@ function mergeSort(array){
     else{
             let halfL = mergeSort(array.slice(0, array.length/2));
             let halfR = mergeSort(array.slice(array.length/2));
-            console.log(halfL,halfR);
             const merge = function(left, right){
                 let merged = [];
                 let i = 0;
@@ -41,3 +40,4 @@ function mergeSort(array){
     }
 }
 console.log(mergeSort([9,8, 0, 89, 2, 6]));
+console.log(mergeSort([9,8, 0, 89, 2, 6 , 233333]));
