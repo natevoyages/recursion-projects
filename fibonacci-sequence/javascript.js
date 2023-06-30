@@ -20,7 +20,6 @@ function fibs(num){
 }
 
 function fibsRec(num, i = num, num1 = 0, num2 = 1){
-    i = i || 0;
     if(i == num){
         return [num1].concat(fibsRec(num, i - 1));
     }
@@ -40,5 +39,27 @@ function fibsRec(num, i = num, num1 = 0, num2 = 1){
     }
 }
 
+
+// better recursive 
+function fibR(n) {
+    if (n <= 0) {
+      return [];
+    } else if (n === 1) {
+      return [0];
+    } else if (n === 2) {
+      return [0, 1];
+    } else {
+      const array = fibR(n - 1);
+      array.push(array[n - 2] + array[n - 3]);
+      return array;
+    }
+  }
+
 console.log(fibs(8));
 console.log(fibsRec(8));
+console.log(fibR(8));
+
+
+
+
+
